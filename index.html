@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Visualizr - Online Audio Analyser</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
+        <link type="text/css" rel="stylesheet" href="css/visualizr.css" />
+    </head>
+    <body>
+        <canvas id="canvas"></canvas>
+        
+        <div id="loading"></div>
+        
+        <div id="wrapper">
+            <div id="logo">
+                <div id="songtitle"></div>
+                <div id="author"></div>
+                <span id="abbreviation">VZ</span>
+            </div>
+
+            <div id="controls">
+                <div class="control" id="play-pause"></div>
+                <div class="control" id="stop"></div>
+                <div id="song"></div>
+            </div>
+        </div>
+        
+        <div id="panel" class="well">
+            <h1><div id="title">Visualizr</div></h1>
+            <div id="subtitle">Online audio visualisation</div>
+            
+            <div class="settings">
+                <div class="setting">
+                    <span>Analyser type</span>
+                    <p class="well">
+                        <label class="radio-inline">
+                            <input type="radio" id="analyser-range-tiny" name="analyser" /> Tiny
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" id="analyser-range-compact" name="analyser" /> Compact
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" id="analyser-range-regular" name="analyser" checked="checked" /> Regular
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" id="analyser-range-wide" name="analyser" /> Wide
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" id="analyser-range-broad" name="analyser" /> Broad
+                        </label>
+                    </p>
+                </div>
+
+                <div class="setting">
+                    <span>Smoothness</span>
+                    <p class="well">
+                        <input type="range" id="analyser-smoothness" min="1" max="999" value="990" /> 
+                        <span id="analyser-smoothness-label">0.990</span>
+                    </p>
+                </div>
+
+                <div class="setting">
+                    <span>Color</span>
+                    <p class="well">
+                        <label class="radio-inline">
+                            <input type="radio" id="analyser-color-warm" name="color" /> Warm
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" id="analyser-color-cold" name="color" /> Cold
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" id="analyser-color-greyscale" name="color" /> Greyscale
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" id="analyser-color-gradient" name="color" /> Gradient
+                        </label>
+                    </p>
+                </div>
+                
+                <div class="setting">
+                    <span>Analytics</span>
+                    <p class="well">
+                        <label class="checkbox-inline">
+                            <input type="checkbox" id="analyser-show-average" name="average" /> Show average
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" id="analyser-show-minimum" name="minimum" /> Show minimum
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" id="analyser-show-maximum" name="maximum" /> Show maximum
+                        </label>
+                        <br />
+                        <br />
+                        Show as 
+                        <label class="radio-inline">
+                            <input type="radio" id="analyser-analytics-line" name="atype" checked="checked" /> line 
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" id="analyser-analytics-area" name="atype" /> area 
+                        </label>
+                    </p>
+                </div>
+                <div class="setting">
+                    <span>Volume</span>
+                    <p class="well">
+                        <input type="range" id="analyser-volume" min="0" max="100" value="100" /> 
+                        <span id="analyser-volume-label">100</span>
+                    </p>
+                </div>
+            </div>
+            <div class="submit">
+                <a href="#" id="close">Close settings</a> 
+                <span id="apply-text"></span>
+            </div>
+        </div>
+        
+        <script type="text/javascript" src="js/jQuery.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/createjs.js"></script>
+        <script type="text/javascript" src="js/visualizr.js"></script>
+        
+    </body>
+</html>
